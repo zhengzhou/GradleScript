@@ -34,7 +34,9 @@ task androidJavadocs(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     excludes += '**/BuildConfig.java'
     excludes += '**/R.java'
-    options.encoding "utf-8"
+    options.encoding 'utf-8'
+    options.charSet 'utf-8'
+    failOnError = false
 }
 
 task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
